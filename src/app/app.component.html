@@ -3,10 +3,10 @@
     <div class="col-5 align-items-center">
       <h3 class="bg-primary text-white p3">{{ getName() }} To Do List</h3>
 
-      <div class="input-group">
-        <input type="text" class="form-group" />
+      <div class="input-group input-group-sm mb-3">
+        <input type="text" #todoText class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
         <div class="input-group-append">
-          <button class="btn btn-primary">Add</button>
+          <button class="btn btn-primary" (click)="addItem(todoText.value); todoText.value=''; ">Add</button>
         </div>
       </div>
 
